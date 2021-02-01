@@ -190,7 +190,7 @@ def ifinstalled(parser, token):
                     unmatched_end_tag += 1
                 if block_name == end_tag:
                     unmatched_end_tag -= 1
-        parser.tokens.insert(0, token)
+        parser.tokens.append(token)
     nodelist = parser.parse((end_tag,))
     parser.delete_first_token()
 
